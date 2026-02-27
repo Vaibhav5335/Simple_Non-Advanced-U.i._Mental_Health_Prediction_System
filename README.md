@@ -1,145 +1,161 @@
-Here is your **final polished, GitHub-ready README.md** — properly formatted, clean, and professional. Just copy-paste directly 👇
+# 🧠 Simple Mental Health Prediction System (Basic UI Version)
 
-```markdown
-# 🧠 Mental Health Prediction System (Django + Machine Learning)
-
-## 📌 Overview
-
-This project is a **full-stack Mental Health Prediction Web Application** built from scratch using **Django** and **Machine Learning**. It allows users to register, log in, and input mental health-related parameters to receive predictions based on a trained ML model.
-
-The system integrates:
-- A **Django backend** for web handling & authentication  
-- A **Machine Learning model** for prediction  
-- A **simple and user-friendly UI**  
-
-> 🎯 **Goal:** Provide an accessible platform for predicting mental health conditions using data-driven insights.
+### Lightweight Machine Learning Web App with Minimal UI
 
 ---
 
-## 🚀 Features
+## 📌 Overview
 
-### 🔐 User Authentication System
-- User Registration  
-- Login & Logout functionality  
-- Secure session management  
+The **Simple Mental Health Prediction System** is a **lightweight and beginner-friendly web application** that predicts mental health conditions using a machine learning model.
 
-### 🧠 Machine Learning Prediction
-- Pre-trained ML model (`health_model.pkl`)  
-- Scaler for preprocessing (`scaler_model.pkl`)  
-- Real-time prediction based on user inputs  
+This version focuses on:
 
-### 🌐 Web Interface
-- Clean and simple UI using HTML templates  
-- Form-based input system  
-- Result display page with prediction output  
+* 🧩 Simplicity in design
+* ⚡ Faster performance
+* 🧠 Core ML functionality
+* 🎯 Clean and minimal user interface
 
-### 📊 Data Handling
-- SQLite database (`db.sqlite3`)  
-- Django ORM for backend operations  
+It is ideal for demonstrating **fundamentals of ML integration with web apps** without complex UI/UX layers.
+
+---
+
+## 🚀 Key Features
+
+### 🧠 Prediction System
+
+* Machine learning-based predictions
+* Simple input form
+* Instant result display
+
+### 🎯 Minimal UI
+
+* Clean and distraction-free design
+* Basic HTML templates
+* Easy navigation
+
+### ⚡ Lightweight Architecture
+
+* Faster load time
+* Minimal dependencies
+* Easy to understand for beginners
 
 ---
 
 ## 🏗️ Project Structure
 
-```
-
+```id="p7kx9c"
 Simple-Non-Adv-UI-MentalHealthPrediction/
 │
-├── manage.py
-├── db.sqlite3
-├── scaler_model.pkl
-├── Guide To Run This Project.txt
+├── prediction/              # Core app
+│   ├── views.py             # Handles logic & predictions
+│   ├── models.py            # Database models (if used)
+│   ├── urls.py              # Routing
 │
-├── student/                # Django Project Configuration
-│   ├── settings.py
-│   ├── urls.py
-│   ├── asgi.py
-│   └── wsgi.py
+├── templates/               # HTML templates
+├── static/                  # CSS (basic styling)
 │
-├── app/                    # Main Application
-│   ├── models.py
-│   ├── views.py
-│   ├── admin.py
-│   ├── health_model.pkl
-│   ├── templates/
-│   │   ├── home.html
-│   │   ├── login.html
-│   │   ├── register.html
-│   │   ├── registerForm.html
-│   │   ├── welcome.html
-│   │   ├── ml.html
-│   │   └── result.html
-│   └── migrations/
-
-````
+├── train_model.py           # ML training script
+├── manage.py                # Django entry point
+├── db.sqlite3               # Database
+```
 
 ---
 
-## 🧪 Tech Stack
+## 🧠 Machine Learning Workflow
 
-### 👨‍💻 Backend
-- Python  
-- Django Framework  
+### ⚙️ Model Training
+
+The system uses a trained ML model created using:
+
+* **Pandas** → Data preprocessing
+* **NumPy** → Data handling
+* **Joblib / Pickle** → Model serialization
+
+### 🔄 Prediction Flow
+
+1. User enters input data
+2. Data is passed to backend
+3. Model processes the input
+4. Prediction is generated
+5. Result is displayed instantly
+
+---
+
+## 🖥️ Tech Stack
+
+### 🌐 Frontend
+
+* HTML
+* Basic CSS
+
+### ⚙️ Backend
+
+* Python
+* Django Framework
 
 ### 🤖 Machine Learning
-- Scikit-learn  
-- Model serialization using `.pkl`  
-- Feature scaling and preprocessing  
 
-### 🎨 Frontend
-- HTML5  
-- Basic CSS  
+* Pandas
+* NumPy
+* Scikit-learn / Joblib
 
 ### 🗄️ Database
-- SQLite (default Django database)  
+
+* SQLite (optional usage)
 
 ---
 
-## ⚙️ How It Works
+## 🔄 Application Flow
 
-### 1️⃣ User Authentication
-- Users register and log in  
-- Credentials are securely stored in the database  
-
-### 2️⃣ Input Data
-- Users access the prediction page  
-- Fill in mental health-related inputs  
-
-### 3️⃣ Prediction Process
-- Input data is:
-  - Cleaned  
-  - Scaled using `scaler_model.pkl`  
-- Processed through trained model (`health_model.pkl`)  
-
-### 4️⃣ Output
-- Prediction result is displayed on the result page  
+1. User opens homepage
+2. Enters required mental health parameters
+3. Submits form
+4. Backend processes request
+5. Prediction result is shown
 
 ---
 
-## 🖥️ UI Pages
+## 📂 Core Files Explained
 
-| Page            | Description                      |
-|-----------------|----------------------------------|
-| `home.html`     | Landing page                     |
-| `register.html` | User registration                |
-| `login.html`    | Login page                       |
-| `welcome.html`  | Dashboard after login            |
-| `ml.html`       | Input form for prediction        |
-| `result.html`   | Displays prediction results      |
+### 📌 `views.py`
+
+* Handles form input
+* Loads ML model
+* Returns prediction results
+
+### 📌 `train_model.py`
+
+* Trains the ML model
+* Saves model for reuse
+
+### 📌 `templates/`
+
+* Contains basic UI pages
+* Displays forms and results
 
 ---
 
-## 🔧 Installation & Setup
+## 🎨 UI Highlights
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-````
+* Minimalist interface
+* No complex styling
+* Beginner-friendly structure
+* Focus on functionality over design
+
+---
+
+## ⚡ Installation & Setup
+
+### 1️⃣ Clone Repository
+
+```bash id="f2k9sd"
+git clone https://github.com/your-username/simple-mental-health-prediction.git
+cd simple-mental-health-prediction
+```
 
 ### 2️⃣ Create Virtual Environment
 
-```bash
+```bash id="v0l3pd"
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
@@ -147,68 +163,72 @@ venv\Scripts\activate      # Windows
 
 ### 3️⃣ Install Dependencies
 
-```bash
-pip install django scikit-learn
+```bash id="d8u2qp"
+pip install -r requirements.txt
 ```
 
 ### 4️⃣ Run Migrations
 
-```bash
+```bash id="k91nqe"
 python manage.py migrate
 ```
 
-### 5️⃣ Run Development Server
+### 5️⃣ Train Model (if required)
 
-```bash
+```bash id="h7c5rb"
+python train_model.py
+```
+
+### 6️⃣ Run Server
+
+```bash id="n4y8mx"
 python manage.py runserver
 ```
 
-### 6️⃣ Open in Browser
+### 7️⃣ Open in Browser
 
-```
+```id="r3j9zt"
 http://127.0.0.1:8000/
 ```
 
 ---
 
-## 📈 Key Highlights
+## 📊 Use Case
 
-* ✅ Built completely from scratch
-* ✅ Combines **Web Development + Machine Learning**
-* ✅ Real-time prediction system
-* ✅ Authentication with database integration
-* ✅ Beginner-friendly and functional UI
+This project is best suited for:
 
----
-
-## 🧠 Machine Learning Details
-
-* Model trained externally and saved as `.pkl`
-* Includes:
-
-  * Feature scaling
-  * Prediction pipeline
-* Integrated directly into Django views
+* 🎓 Beginners learning Django + ML
+* 🧠 Understanding ML deployment basics
+* 💼 Portfolio demonstration (entry-level)
+* 🧪 Testing ML models quickly
 
 ---
 
-## 🔮 Future Improvements
+## 🌟 Highlights
 
-* Enhance UI using modern frameworks (React / Bootstrap)
-* Add REST API support (Django REST Framework)
-* Improve ML model accuracy
-* Add dashboards & data visualization
-* Deploy to cloud (AWS / Render / Heroku)
+✔ Beginner-friendly project
+✔ Simple and clean structure
+✔ Focus on core ML logic
+✔ Easy to modify and extend
 
 ---
 
-## 🙋‍♂️ Author
+## 🧩 Future Improvements
+
+* 🎨 Improve UI/UX design
+* 🔐 Add authentication system
+* 📊 Store prediction history
+* 🌐 Deploy on cloud platforms
+* 📱 Make responsive design
+
+---
+
+## 👨‍💻 Author
 
 **Vaibhav Sharma**
 
-* 💼 Passionate Full Stack Developer
-* 🤖 Interested in AI/ML Integration
-* 🌱 Building real-world projects from scratch
+* Aspiring Full Stack & ML Developer
+* Built this project as a learning milestone
 
 ---
 
@@ -218,17 +238,10 @@ This project is open-source and available under the **MIT License**.
 
 ---
 
-## ⭐ Support
+## 💡 Final Note
 
-If you like this project:
+This project proves that even a **simple UI + strong logic** can create impactful applications.
 
-* ⭐ Star the repository
-* 🍴 Fork it
-* 🧠 Contribute ideas
+A perfect stepping stone toward advanced full-stack ML systems 🚀
 
 ---
-
-> 💡 *"Bridging Machine Learning with Web Development to create impactful solutions."*
-
-```
-
