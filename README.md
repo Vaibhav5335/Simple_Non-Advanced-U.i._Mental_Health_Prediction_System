@@ -1,4 +1,5 @@
 # 🧠 Simple Mental Health Prediction System (Basic UI Version)
+Simple Mental Health Prediction System is a lightweight Django-based web app that uses a machine learning model to predict mental health conditions. It features a minimal UI, fast performance, and simple architecture, making it ideal for beginners learning ML integration and deployment basics.
 
 ### Lightweight Machine Learning Web App with Minimal UI
 
