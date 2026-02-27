@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    form { max-width: 700px; margin: auto; }
+    .question { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; font-weight: bold; }
+    input[type="radio"], input[type="number"], input[type="text"] {
+      margin-right: 8px;
+    }
+    select { padding: 5px; }
+    button { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h2>Student Mental Health & Lifestyle Survey</h2>
+  <form action="{% url 'result' %}" method="post">
+    {% csrf_token %}
+
+    <!-- Gender -->
+    <div class="question">
+      <label>Gender</label>
+      <input type="radio" name="gender" value="1"> Male
+      <input type="radio" name="gender" value="0"> Female
+    </div>
+
+    <div class="question">
+      <label>Feeling down, depressed, or hopeless?</label>
+      <input type="radio" name="depressed" value="1"> Yes
+      <input type="radio" name="depressed" value="0"> No
+    </div>
+
+    <div class="question">
+      <label>Little interest or pleasure in doing things?</label>
+      <input type="radio" name="pleasure" value="1"> Yes
+      <input type="radio" name="pleasure" value="0"> No
+    </div>
+
+    <div class="question">
+      <label>Are you having proper sleep (minimum 6 hrs daily)?</label>
+      <input type="radio" name="sleep" value="1"> Yes
+      <input type="radio" name="sleep" value="0"> No
+    </div>
+
+    <div class="question">
+      <label>Feeling tired or having little energy?</label>
+      <input type="radio" name="tired" value="1"> Yes
+      <input type="radio" name="tired" value="0"> No
+    </div>
+
+    <div class="question">
+      <label>Taking proper meal?</label>
+      <input type="radio" name="meal" value="1"> Yes
+      <input type="radio" name="meal" value="0"> No
+    </div>
+
+    <div class="question">
+      <label>Feeling bad about yourself or feeling like a failure?</label>
+      <input type="radio" name="failure" value="1"> Yes
+      <input type="radio" name="failure" value="0"> No
+    </div>
+
+    <div class="question">
+      <label>Trouble concentrating on tasks (reading, studying, watching TV)?</label>
+      <input type="radio" name="concentration" value="1"> Yes
+      <input type="radio" name="concentration" value="0"> No
+    </div>
+
+    <div class="question">
+      <label>Moving or speaking unusually slow/restless?</label>
+      <input type="radio" name="movement" value="1"> Yes
+      <input type="radio" name="movement" value="0"> No
+    </div>
+
+    <div class="question">
+      <label>Thoughts of being better off dead or self-harm?</label>
+      <input type="radio" name="selfharm" value="1"> Yes
+      <input type="radio" name="selfharm" value="0"> No
+    </div>
+
+    <div class="question">
+      <label>Do you have a part-time or full-time job?</label>
+      <input type="radio" name="job" value="1"> Yes
+      <input type="radio" name="job" value="0"> No
+    </div>
+
+    <div class="question">
+      <label>How many hours do you spend studying each day (self-study)?</label>
+      <input type="number" name="study_hours" min="0" max="24"> hours
+    </div>
+
+    <div class="question">
+      <label>How many hours do you spend on electronic gadgets daily?</label>
+      <input type="number" name="gadgets" min="0" max="24"> hours
+    </div>
+
+    <div class="question">
+      <label>How many hours do you spend on social media per day?</label>
+      <input type="number" name="social_media" min="0" max="24"> hours
+    </div>
+
+    <div class="question">
+      <label>How many hours of physical activity/exercise per week?</label>
+      <input type="number" name="exercise" min="0" max="168"> hours
+    </div>
+
+    <div class="question">
+      <label>Do you consume substances (alcohol, tobacco, drugs)?</label>
+      <input type="radio" name="substance" value="1"> Yes
+      <input type="radio" name="substance" value="0"> No
+    </div>
+
+    <div class="question">
+      <label>Your last year percentage</label>
+      <input type="number" name="percentage" min="0" max="100"> %
+    </div>
+
+    <div class="question">
+      <label>Education Level</label>
+      <select name="education">
+        <option value="school">School</option>
+        <option value="undergraduate">Under Graduation</option>
+        <option value="postgraduate">Post Graduation</option>
+      </select>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

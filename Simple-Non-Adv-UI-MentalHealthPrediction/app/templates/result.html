@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Page</title>
+</head>
+<body>
+    <h2>Result of Prediction</h2>
+
+    {% if prediction %}
+        <p><b>Your prediction result:</b> {{ prediction }}</p>
+    {% elif error %}
+        <p style="color:red;"><b>Error:</b> {{ error }}</p>
+    {% else %}
+        <p>No result available. Please submit the form again.</p>
+    {% endif %}
+
+    <a href="{% url 'ml' %}">Go Back</a> |
+    <a href="{% url 'welcome' %}">Logout</a>
+</body>
+</html>

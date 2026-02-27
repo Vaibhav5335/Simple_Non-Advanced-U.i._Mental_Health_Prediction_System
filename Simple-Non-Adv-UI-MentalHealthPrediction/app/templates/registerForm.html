@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if userstatus == 1 %}
+<a href="{% url 'register' %}"><button>Singup</button></a>
+<a href="{% url 'login' %}"><button>Login</button></a>
+<div>
+    <h3>Sorry, Username Already Registered</h3>
+</div>
+
+{% else %}
+<div>
+    <h3>Welcome to Student System</h3>
+</div>
+{% endif %}
+{% endblock %}
